@@ -14,7 +14,7 @@ const Contact = () => {
         alignItems="center"
         justifyContent="space-between"
         py={10}
-        mx={{ xs: 0, lg: 15 }}
+        mx={{ xs: 0, lg: 15, xl: 35 }}
       >
         <FormSection />
         <ContactInfo />
