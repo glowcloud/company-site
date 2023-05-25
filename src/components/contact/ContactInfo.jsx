@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 import Info from "./Info";
 
@@ -12,8 +12,8 @@ const ContactInfo = () => {
       flexDirection="column"
       justifyContent="space-around"
       borderRadius={3}
-      pl={{xs: 5, sm: 10, md: 10, lg: 5}}
-      pr={{xs: 10, sm: 35, md: 50, lg: 10}}
+      pl={{ xs: 5, sm: 10, md: 10, lg: 5 }}
+      pr={{ xs: 10, sm: 35, md: 50, lg: 10 }}
       py={8}
     >
       <Info headingText="Location" infoText="Warsaw, Poland" />
