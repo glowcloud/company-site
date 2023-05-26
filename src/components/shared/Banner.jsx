@@ -33,10 +33,9 @@ const Banner = ({ text }) => {
         variant="h1"
         textAlign="center"
         color="#fff"
-        px={5}
-        sx={{
-          py: { xs: 10, md: 10 },
-        }}
+        fontWeight="400"
+        px={{ sm: 5 }}
+        py={{ xs: 10, md: 10 }}
       >
         {text}
       </Typography>
