@@ -25,7 +25,7 @@ const FAQ = () => {
             height: "55rem",
             width: "55rem",
             top: { xs: "70%", lg: "55%" },
-            left: "-50rem",
+            left: {xs: "-60rem", sm: "-50rem"},
             transform: "rotate(45deg)",
           },
           "&::after": {
@@ -37,7 +37,7 @@ const FAQ = () => {
             height: "65rem",
             width: "65rem",
             top: { xs: "60%", lg: "45%" },
-            left: "-51rem",
+            left: {xs: "-63rem", sm: "-51rem"},
             transform: "rotate(45deg)",
           },
         }}

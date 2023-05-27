@@ -12,7 +12,7 @@ const Footer = () => {
       width="100%"
       alignItems="center"
       py={4}
-      px={25}
+      px={{xs: 0, md: 25}}
       backgroundColor="#1976d2"
     >
       <FooterLogo />
