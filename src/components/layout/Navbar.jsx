@@ -58,6 +58,7 @@ const Navbar = () => {
             variant="h5"
             sx={{
               px: 2,
+              fontWeight: "bold",
               cursor: "pointer",
               display: { xs: "none", lg: "block" },
             }}
@@ -73,11 +74,13 @@ const Navbar = () => {
               sx={{
                 mx: 1,
                 px: 2,
-                color: pathname === item.page ? "black" : "white",
-                backgroundColor: pathname === item.page ? "white" : "",
+                borderRadius: 0,
+                color: "white",
+                borderBottom: pathname === item.page ? "3px solid white" : "",
+                pt: pathname === item.page ? 1.2 : "",
                 "&:hover": {
-                  color: "black",
-                  backgroundColor: "white",
+                  borderBottom: "3px solid white",
+                  pt: 1.2,
                 },
               }}
               onClick={() => navigate(item.page)}
