@@ -1,11 +1,19 @@
-import { Box, Typography, Paper, Divider } from "@mui/material";
+import { Box, Typography, Divider } from "@mui/material";
+import { motion } from "framer-motion";
 
 import { rating } from "../../assets";
 
 const Review = ({ profile, name, title }) => {
   return (
     <Box
-      component={Paper}
+      component={motion.div}
+      variants={{
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: {
+          opacity: 1,
+          scale: 1,
+        },
+      }}
       width="100%"
       mx={2}
       mb={{ xs: 15, md: 0 }}

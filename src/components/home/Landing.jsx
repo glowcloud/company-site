@@ -1,13 +1,15 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import { motion } from "framer-motion";
 
 import { businessWoman08 } from "../../assets";
+import LandingText from "./LandingText";
 
 const Landing = () => {
   return (
     <Box
       component="section"
-      pt={25}
-      px={{ xs: 5, sm: 20, md: 5, lg: 20, xl: 45 }}
+      pt={{ xs: 15, md: 18, xl: 25 }}
+      px={{ xs: 5, sm: 20, md: 5, lg: 20, xl: 40 }}
       pb={10}
       mb={5}
       display="flex"
@@ -49,25 +51,15 @@ const Landing = () => {
           },
         }}
       />
-      <Box
-        pr={{ xs: 0, md: 4, lg: 5, xl: 5 }}
-        textAlign={{ xs: "center", md: "left" }}
-      >
-        <Typography variant="h2" fontWeight="bold" gutterBottom>
-          Lorem ipsum dolor sit amet
-        </Typography>
-        <Typography pr={{ xs: 0, md: 10, lg: 20 }} gutterBottom>
-          Nunc varius iaculis felis, in tristique massa tincidunt non. Maecenas
-          egestas diam eget metus malesuada, eget commodo lacus commodo. Ut
-          tincidunt ante tellus, at aliquet eros bibendum sed.
-        </Typography>
-        <Button variant="contained" size="large" sx={{ mt: 5 }}>
-          Get Started
-        </Button>
-      </Box>
+
+      <LandingText />
 
       <Box
-        component="img"
+        component={motion.img}
+        initial={{ opacity: 0, x: 95 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
         src={businessWoman08}
         alt="Landing Photo"
         height={500}

@@ -11,10 +11,9 @@ const InfoText = () => {
       initial={{ opacity: 0, x: 75 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.35 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
       pl={{ xs: 5, sm: 20, md: 10 }}
       pr={{ xs: 5, sm: 20, md: 0 }}
-      position="relative"
     >
       <Typography variant="h6" fontWeight="bold" color="primary" gutterBottom>
         Lorem ipsum
@@ -25,7 +24,9 @@ const InfoText = () => {
       <Typography pb={2} gutterBottom>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus
         ultrices tellus a venenatis. Nulla non tellus eu nibh pulvinar
-        ullamcorper. Vivamus mollis accumsan luctus.
+        ullamcorper. Vivamus mollis accumsan luctus. Curabitur a eros sapien.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos.
       </Typography>
       <Typography pb={4} gutterBottom>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien dui,
@@ -35,14 +36,9 @@ const InfoText = () => {
       <Button
         variant="contained"
         size="large"
-        sx={{
-          position: { md: "absolute" },
-          top: { md: 525 },
-          left: { md: 275 },
-        }}
-        onClick={() => navigate("/about")}
+        onClick={() => navigate("/contact")}
       >
-        About Knight Tech
+        Get Started
       </Button>
     </Box>
   );

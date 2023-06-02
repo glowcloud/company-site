@@ -1,4 +1,5 @@
 import { Box, Paper } from "@mui/material";
+import { motion } from "framer-motion";
 
 import { logo } from "../../assets";
 import ServiceCard from "./ServiceCard";
@@ -6,17 +7,42 @@ import ServiceCard from "./ServiceCard";
 const Service = () => {
   return (
     <Box
-      component="section"
       display="flex"
       flexDirection={{ xs: "column", sm: "row" }}
       justifyContent="center"
       py={2}
       px={{ xs: 5, md: 2, lg: 0 }}
+      component={motion.section}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            delayChildren: 0.2,
+            y: { stiffness: 1000, velocity: -100 },
+            duration: 0.35,
+          },
+        },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
     >
       <ServiceCard
         headingText="For Clients"
         infoText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut
           fermentum massa."
+        variants={{
+          hidden: { opacity: 0, x: 100 },
+          visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+              x: { stiffness: 1000, velocity: -100 },
+            },
+          },
+        }}
       />
 
       <Box
@@ -43,6 +69,16 @@ const Service = () => {
         headingText="Employees"
         infoText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut
           fermentum massa."
+        variants={{
+          hidden: { opacity: 0, x: -100 },
+          visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+              x: { stiffness: 1000, velocity: -100 },
+            },
+          },
+        }}
       />
     </Box>
   );

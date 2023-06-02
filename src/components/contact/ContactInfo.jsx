@@ -1,11 +1,16 @@
 import { Box } from "@mui/material";
+import { motion } from "framer-motion";
 
 import Info from "./Info";
 
 const ContactInfo = () => {
   return (
     <Box
-      component="section"
+      component={motion.section}
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{ duration: 0.45, delay: 0.2 }}
       height="30rem"
       backgroundColor="#2196f3"
       display="flex"

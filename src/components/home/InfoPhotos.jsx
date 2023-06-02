@@ -1,12 +1,13 @@
 import { Box } from "@mui/material";
 
 import { work05, work07 } from "../../assets";
+import { motion } from "framer-motion";
 
 const InfoPhotos = () => {
   return (
     <Box
       position="relative"
-      pb={10}
+      pb={{ md: 10 }}
       mb={15}
       sx={{
         "&::before": {
@@ -36,6 +37,11 @@ const InfoPhotos = () => {
       }}
     >
       <Box
+        component={motion.div}
+        initial={{ opacity: 0, x: -95 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
         sx={{
           position: "relative",
           "&::after": {
@@ -55,7 +61,11 @@ const InfoPhotos = () => {
         <Box component="img" src={work05} alt="Employee Photo" height={500} />
       </Box>
       <Box
-        component="img"
+        component={motion.img}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.35 }}
         src={work07}
         alt="Teamwork Photo"
         height={250}

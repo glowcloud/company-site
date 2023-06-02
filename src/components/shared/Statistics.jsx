@@ -1,10 +1,30 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import { motion } from "framer-motion";
 import Statistic from "./Statistic";
 
 const Statistics = () => {
   return (
     <Box
-      component="section"
+      component={motion.section}
+      variants={{
+        hidden: { opacity: 0, y: 100, scale: 0.8 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          transition: {
+            delayChildren: 0.2,
+            staggerChildren: 0.2,
+            y: {
+              stiffness: 1000,
+              velocity: -100,
+            },
+          },
+        },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.25 }}
       display="flex"
       flexDirection={{ xs: "column", md: "row" }}
       alignItems="center"
