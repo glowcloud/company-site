@@ -44,8 +44,8 @@ const Reviews = () => {
           visible: {
             opacity: 1,
             transition: {
-              delayChildren: 0.2,
-              staggerChildren: 0.25,
+              delayChildren: 0.25,
+              staggerChildren: isSmallScreen ? 0.6 : 0.45,
             },
           },
         }}
@@ -70,7 +70,7 @@ const Reviews = () => {
         initial={{ opacity: 0, y: 50, scale: 0.8 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true, amount: isSmallScreen ? 0.25 : 0.5 }}
-        transition={{ duration: 0.35 }}
+        transition={{ duration: 0.45 }}
         variant="contained"
         size="large"
         sx={{ mt: { md: 5 } }}

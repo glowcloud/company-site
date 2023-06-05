@@ -16,7 +16,7 @@ const FAQ = () => {
         hidden: {},
         visible: {
           transition: {
-            staggerChildren: 0.25,
+            staggerChildren: 0.35,
             delayChildren: 0.2,
           },
         },

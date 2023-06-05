@@ -11,7 +11,7 @@ const InfoText = () => {
       initial={{ opacity: 0, x: 75 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.35 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.55 }}
       pl={{ xs: 5, sm: 20, md: 10 }}
       pr={{ xs: 5, sm: 20, md: 0 }}
       position="relative"

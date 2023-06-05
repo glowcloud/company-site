@@ -13,7 +13,7 @@ const TeamMember = ({ photo }) => {
           opacity: 1,
           transition: {
             delayChildren: 0.2,
-            staggerChildren: isSmallScreen ? 0.5 : 0.25,
+            staggerChildren: isSmallScreen ? 0.5 : 0.35,
           },
         },
       }}

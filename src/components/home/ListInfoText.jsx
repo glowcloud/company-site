@@ -18,7 +18,7 @@ const ListInfoText = () => {
           transition: {
             duration: 0.5,
             delayChildren: 0.35,
-            staggerChildren: 0.25,
+            staggerChildren: 0.45,
           },
         },
       }}

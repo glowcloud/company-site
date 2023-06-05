@@ -1,16 +1,18 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 
 import { work06 } from "../../assets";
 
 const ListInfoPhoto = () => {
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("md"));
+
   return (
     <Box
       component={motion.div}
       initial={{ opacity: 0, x: 95 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.35 }}
-      transition={{ duration: 0.35 }}
+      transition={{ duration: isSmallScreen ? 0.6 : 0.4 }}
       mr={{ md: 2, lg: 0 }}
       mb={{ xs: 5, md: 0 }}
       sx={{

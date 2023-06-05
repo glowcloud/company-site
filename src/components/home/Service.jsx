@@ -1,10 +1,12 @@
-import { Box, Paper } from "@mui/material";
+import { Box, Paper, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 
 import { logo } from "../../assets";
 import ServiceCard from "./ServiceCard";
 
 const Service = () => {
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("md"));
+
   return (
     <Box
       display="flex"
@@ -19,9 +21,9 @@ const Service = () => {
           opacity: 1,
           y: 0,
           transition: {
-            delayChildren: 0.2,
+            delayChildren: isSmallScreen ? 0.25 : 0.4,
             y: { stiffness: 1000, velocity: -100 },
-            duration: 0.35,
+            duration: 0.5,
           },
         },
       }}

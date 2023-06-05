@@ -11,7 +11,7 @@ const LandingText = () => {
         hidden: { opacity: 0 },
         visible: {
           opacity: 1,
-          transition: { delayChildren: 0.1, staggerChildren: 0.25 },
+          transition: { delayChildren: 0.15, staggerChildren: 0.4 },
         },
       }}
       initial="hidden"
