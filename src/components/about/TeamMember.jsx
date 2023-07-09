@@ -36,6 +36,7 @@ const TeamMember = ({ photo }) => {
         src={photo}
         alt="Founder Photo"
         height={400}
+      boxShadow="0px 10px 24px -4px rgba(144, 202, 249, 1)"
       />
       <Box px={{ xs: 0, lg: 8 }} pt={{ xs: 5, lg: 0 }}>
         <Box

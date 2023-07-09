@@ -58,7 +58,13 @@ const InfoPhotos = () => {
           },
         }}
       >
-        <Box component="img" src={work05} alt="Employee Photo" height={500} />
+        <Box
+          component="img"
+          src={work05}
+          alt="Employee Photo"
+          height={500}
+          boxShadow="0px 10px 24px -4px rgba(144, 202, 249, 1)"
+        />
       </Box>
       <Box
         component={motion.img}
@@ -73,6 +79,7 @@ const InfoPhotos = () => {
         left={180}
         top={{ md: 400, lg: 360 }}
         display={{ xs: "none", md: "block" }}
+        boxShadow="0px 10px 24px -4px rgba(144, 202, 249, 1)"
       />
     </Box>
   );

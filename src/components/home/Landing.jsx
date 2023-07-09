@@ -64,6 +64,7 @@ const Landing = () => {
         alt="Landing Photo"
         height={500}
         display={{ xs: "none", md: "block" }}
+        boxShadow="0px 10px 24px -4px rgba(144, 202, 249, 1)"
       />
     </Box>
   );
