@@ -48,7 +48,7 @@ const ListInfoPhoto = () => {
         src={work06}
         alt="Work Photo"
         height={{ xs: 550, md: 500 }}
-        pb={{ xs: 5, md: 0 }}
+        mb={{ xs: 5, md: 0 }}
         boxShadow="0px 10px 24px -4px rgba(144, 202, 249, 1)"
       />
     </Box>
